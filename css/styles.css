@@ -1,3 +1,21 @@
+@keyframes pop{
+    0% {
+        transform: scale(1);
+    }
+    20%{
+        transform: scale(1.5);
+    }
+    50% {
+        transform: translate(100px);
+        background-color: tomato;
+    }
+    100%{
+        transition: translate(0);
+        background-color: gold;
+    }
+}
+
+
 body {
     display: flex;
     justify-content: center;
@@ -10,19 +28,15 @@ body {
     height: 150px;
     background-color: gold;
     font-size: 1.3rem;
-    transition: transform 5s cubic-bezier(0.075, 0.82, 0.165, 1), background-color 2s;
+    
 }
-.box div {
-    margin: 10px 10px;
-    height: 150px;
+.animation-pop {
+    animation: pop 6s linear 1s infinite;
+}
 
+.animate__fadeInUpBig{
+    animation: fadeInUpBig 5s line infinite;
 }
-.box:hover {
-    /* transform:rotate(45deg);
-    transform: scale(2);
-    transform: skew(-15deg); */
-    /* transform: translate(20px,30px); */
-    /* transform: perspective(200px) translateZ(-50px); */
-    transform: perspective(200px) rotateY(-40deg) ;
-    background-color: aqua;
+.box-button {
+    cursor: pointer;
 }
