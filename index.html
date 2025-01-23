@@ -7,15 +7,14 @@
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <script src="src/animator.js"></script>
     <title>Document</title>
 </head>
 <body>
     <div class="container">
-        <div class="box"><div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, modi.</div></div>
-        <div class="box box-button animation-pop" id="box_animate"><div onclick="startStop()">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, modi.</div>
-
-        </div>
+        <div class="box">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, modi.</div>
+        <div id="box_animate" class="box">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, modi.</div>
     </div>
+    <button onclick="startStop()">Start/Stop</button>
+    <script src="src/animator.js"></script>
 </body>
 </html>

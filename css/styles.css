@@ -1,4 +1,4 @@
-@keyframes pop{
+@keyframes pop {
     0% {
         transform: scale(1);
     }
@@ -36,7 +36,4 @@ body {
 
 .animate__fadeInUpBig{
     animation: fadeInUpBig 5s line infinite;
-}
-.box-button {
-    cursor: pointer;
 }
