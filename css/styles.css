@@ -1,39 +1,86 @@
-@keyframes pop {
+html {
+    font-size: 62.5%;
+}
+@keyframes circle {
     0% {
-        transform: scale(1);
+        transform: translate(0, 0);
     }
-    20%{
-        transform: scale(1.5);
+    12.5% {
+        transform: translate(-60px, -100px); /* top-left */
+    }
+    25% {
+        transform: translate(-140px, -130px); /* top */
+    }
+    37.5% {
+        transform: translate(-230px, -75px); /* top-right */
     }
     50% {
-        transform: translate(100px);
-        background-color: tomato;
+        transform: translate(-230px, 0); /* right */
     }
-    100%{
-        transition: translate(0);
-        background-color: gold;
+    62.5% {
+        transform: translate(-230px, 65px); /* bottom-right */
+    }
+    75% {
+        transform: translate(-180px, 120px); /* bottom */
+    }
+    87.5% {
+        transform: translate(-70px, 120px); /* bottom-left */
+    }
+    100% {
+        transform: translate(0, 0); /* back to start */
     }
 }
 
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
 }
-
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 3vw;
+    justify-content: center;
+    align-items: center;
+}
 .box{
-    width: 150px;
-    height: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    height: 10rem;
     background-color: gold;
-    font-size: 1.3rem;
-    
+    border-radius: 50%;
+    font-size: 2rem;
 }
-.animation-pop {
-    animation: pop 6s linear 1s infinite;
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-top: 13rem;
+    font-size: 1rem;
 }
-
-.animate__fadeInUpBig{
-    animation: fadeInUpBig 5s line infinite;
+button {
+    height: 5rem;
+    font-size: 2rem;
+    color: white;
+    font-weight: 300;
+}
+.buttons button:nth-child(1) {
+    background-color: green;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.buttons button:nth-child(2) {
+    background-color: red;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.animation-circle {
+    animation: circle 6s linear 0.5s infinite;
 }

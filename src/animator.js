@@ -1,5 +1,8 @@
-const boxAnimationElement = document.querySelector("#box_animate");
+let boxAnimationElement = document.querySelector("#box_animate");
     
-function startStop() {
-    boxAnimationElement.classList.toggle("animation-pop");
+function start() {
+    boxAnimationElement.classList.add("animation-circle");
+}
+function stop() {
+    boxAnimationElement.classList.remove("animation-circle");
 }
